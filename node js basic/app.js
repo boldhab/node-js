@@ -13,4 +13,7 @@ rl.question("Please enter your name: ", (name) => {
 rl.on('close', () => {
     console.log("Interface is closed");
     process.exit(0);
+
 });
+
+
