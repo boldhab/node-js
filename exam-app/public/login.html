@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Student Login</h1>
+
+    <!-- Login form sends POST request to /api/login route -->
+    <form action="/api/login" method="POST">
+        <!-- Username input -->
+        <input type="text" name="username" placeholder="Username" required><br><br>
+
+        <!-- Password input -->
+        <input type="password" name="password" placeholder="Password" required><br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
