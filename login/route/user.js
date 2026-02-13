@@ -3,15 +3,8 @@ const checklogin=require('../middleware/auth');
 
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-    res.json({
-        message:"Welcome to the user route"
-    });
-});
-
-router.post('/dashboard',checklogin,(req,res)=>{
-    res.json({
-        message:"Welcome to the user dashboard"
-    });
+router.post('/login',checklogin,(req,res)=>{
+    res.send("<h1>Welcome to the dashboard</h1>")
 });
  
+module.exports=router;
