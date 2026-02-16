@@ -11,3 +11,5 @@ const verifyjwt=(req,res,next)=>{
        next();
     });
 }
+
+module.exports = verifyjwt;

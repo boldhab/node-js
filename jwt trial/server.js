@@ -1,21 +1,21 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const cookiepraser=require('cookie-parser');
-const cors=require('cors');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
-const verifyjwt=require('./middleware/verifyjwt');
+const verifyJwt = require('./middleware/verifyjwt');
 app.use(express.json());
-app.use(cookiepraser());
+app.use(cookieParser());
 app.use(cors({
-    origin:'http://localhost:3000',
-    credentials:true
+    origin: 'http://localhost:3000',
+    credentials: true
 }));
 
-app.use('/auth',require('./routes/auth'));
-app.use('/notes',verifyjwt,require('./routes/notes'));
+app.use('/auth', require('./routes/authroutes'));
+app.use('/notes', verifyJwt, require('./routes/noteroutes'));
 
 
-app.listen(4000,()=>{
+app.listen(4000, () => {
     console.log('Server running on port 4000');
 });
